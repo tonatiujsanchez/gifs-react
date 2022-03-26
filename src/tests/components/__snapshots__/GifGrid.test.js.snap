@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas del componente GifGrid El componente GifGrid debe de mostrarse correctamente 1`] = `
+<div
+  className="category"
+>
+  <h3>
+    Trunks
+  </h3>
+  <Loading />
+</div>
+`;

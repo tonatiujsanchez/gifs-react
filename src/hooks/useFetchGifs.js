@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import { getGif } from "../helpers/getGifs"
+import { getGifs } from "../helpers/getGifs"
 
 
 
-const useFetchGifs = (category ) => {
+const useFetchGifs = ( category ) => {
 
 
     const [ state, setState ] = useState({
@@ -13,15 +13,13 @@ const useFetchGifs = (category ) => {
 
     useEffect(()=>{
 
-        getGif(category).then(
+        getGifs(category).then(
             gifs => {
 
-                setTimeout(()=>{
-                    setState( {
-                        data: [ ...gifs ],
-                        loading: false
-                    })
-                },1500)
+                setState( {
+                    data: [ ...gifs ],
+                    loading: false
+                })
 
             } 
         )

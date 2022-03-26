@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const getGif = async (category) => {
+export const getGifs = async (category) => {
 
     try {
         const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&key=ycZwMRmGee8d8Fv6IyLgr4EqwWOFG42E`

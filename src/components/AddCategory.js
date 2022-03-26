@@ -5,25 +5,30 @@ const AddCategory = ({ addNewCategory }) => {
 
     const [ inputValue, setInputValue ] = useState('')
 
+
+    const handleChange = ( e ) => {
+        setInputValue( e.target.value )
+    }
+
+
     const handleSubmit = (e) =>{
         e.preventDefault()
-
-        if( inputValue.trim() === '' ){
-            console.log( 'El campo es obligatorio' )
-            return
+        
+        if( inputValue.trim() !== '' ){
+            addNewCategory( inputValue )
+            setInputValue('')        
         }
-
-        addNewCategory( inputValue )
-        setInputValue('')        
+        
     }
 
 
   return (
     <form onSubmit={ handleSubmit }>
+        <p>{ inputValue }</p>
         <input 
             type="text" 
             value={ inputValue } 
-            onChange={ ( e )=> setInputValue( e.target.value ) }
+            onChange={ handleChange }
             placeholder= 'One Punch, Samurai X, Dragon Ball, Etc'/>
     </form>
   )

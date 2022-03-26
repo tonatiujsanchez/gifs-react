@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Priebas en el Componente AddCategory Debe de mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <p />
+  <input
+    onChange={[Function]}
+    placeholder="One Punch, Samurai X, Dragon Ball, Etc"
+    type="text"
+    value=""
+  />
+</form>
+`;
